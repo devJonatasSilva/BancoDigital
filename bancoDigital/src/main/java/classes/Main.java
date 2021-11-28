@@ -9,9 +9,15 @@ public class Main {
 
     
     public static void main(String[] args) {
-        Conta cc1 = new ContaCorrente();
-        Conta cc2 = new ContaCorrente();
-        Conta cp1 = new ContaPoupanca();
+        
+        Cliente jonatas = new Cliente();
+        jonatas.setNome("Jonatas Severino da Silva");
+        Cliente pedro = new Cliente();
+        pedro.setNome("Pedro josé da Silva");
+                
+        Conta cc1 = new ContaCorrente(jonatas);
+        Conta cc2 = new ContaCorrente(pedro);
+        Conta cp1 = new ContaPoupanca(jonatas);
         
         cc1.imprimirSaldoDaConta();
         cc2.imprimirSaldoDaConta();
